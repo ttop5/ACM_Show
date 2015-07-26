@@ -58,3 +58,6 @@ target/
 
 # venv 
 venv/*
+
+# .idea
+.idea/*
