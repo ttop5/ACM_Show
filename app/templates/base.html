@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <style type="text/css"></style>
+
+    {% block css %}
+    {% endblock %}
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+           <div class="navbar-header">
+                <a class="naverbar-brand" href="http://acm.sdut.edu.cn/">
+                    <img src="{{ url_for('static', filename='images/AC_logo.jpg') }}" style="width: 70px">
+                </a>
+            </div>
+            <ul class="nav navbar-nav" id="mytab">
+                <li><a href="http://acm.sdut.edu.cn/sdutoj/index.php"><b>Online Judge</b><span class="sr-only"></span></a></li>
+                 <li role="presentation"><a href="http://acm.sdut.edu.cn/statistical_charts/" ><b>Statistical Charts</b></a></li>
+                <li role="presentation"><a href="#"><b>SDUT Pastebin</b></a></li>
+                <li role="presentation" class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                <b>
+                    Acm Show
+                </b>
+                <span class="caret"></span>
+        </a>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="/ac_life"><b>AC Life</b></a></li>
+            <li><a href="/ac_team"><b>AC Team</b></a></li>
+            <li><a href="/ac_coach"><b>AC Coach</b></a></li>
+        </ul>
+	<li role="presentation"><a href=""></a></li>
+</ul>
+        <ul class="dropdown-menu" role="menu">
+            </ul>
+        </div>
+    </nav>
+
+    <br><br>
+    {% block page %}
+
+    {% endblock %}
+
+
+
+    <br>
+    {% block script %}
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    {% endblock %}
+
+    <footer>
+        <center>
+            Design by :
+            <a href="http://ttop5.net/"><b>ttop5</b></a>
+            <br>
+            Copyright &copy 2015 <a href="#"> SDUT ACM Team </a>. All right reserved.
+        </center>
+    </footer>
+</body>
+</html>
