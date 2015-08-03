@@ -2,6 +2,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask.ext.login import UserMixin
 from app import db
 
+
 class UserModel(db.Document, UserMixin):
     id = db.SequenceField(primary_key=True)
     username = db.StringField(max_length=255)

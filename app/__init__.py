@@ -32,5 +32,3 @@ with app.app_context():
     )
 
 from app import views, models
-
-
