@@ -12,6 +12,11 @@ def ac_life():
     return render_template("ac_life.html")
 
 
+@app.route('/ac_match')
+def ac_match():
+    return render_template("ac_match.html")
+
+
 @app.route('/ac_team')
 def ac_team():
     return render_template("ac_team.html")
