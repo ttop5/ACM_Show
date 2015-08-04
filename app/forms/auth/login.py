@@ -10,7 +10,7 @@ from app.models import UserModel
 class LoginForm(Form):
     email = StringField(u'E-mail', [Required(), Email()])
     password = PasswordField(u'Passwd', [Required()])
-    remember_me = BooleanField(u'Remember Me')
+    remember_me = BooleanField(u'Remember me')
     submit = SubmitField(u'Sign in')
 
     def validate_password(self, field):
