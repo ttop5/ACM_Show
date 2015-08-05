@@ -7,24 +7,24 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/ac_life')
+@app.route('/acm_train')
 def ac_life():
-    return render_template("ac_life.html")
+    return render_template("acm_train.html")
 
 
-@app.route('/ac_match')
+@app.route('/acm_match')
 def ac_match():
-    return render_template("ac_match.html")
+    return render_template("acm_match.html")
 
 
-@app.route('/ac_team')
+@app.route('/acm_team')
 def ac_team():
-    return render_template("ac_team.html")
+    return render_template("acm_team.html")
 
 
-@app.route('/ac_coach')
+@app.route('/acm_coach')
 def ac_coach():
-    return render_template("ac_coach.html")
+    return render_template("acm_coach.html")
 
 
 @app.errorhandler(404)

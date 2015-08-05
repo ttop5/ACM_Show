@@ -5,6 +5,12 @@
     <title>{% block title %} {% endblock %}</title>
 
 
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://v3.bootcss.com/examples/offcanvas/offcanvas.css" rel="stylesheet">
+    <style type="text/css"></style><script src="./Off Canvas Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
     {% block css %}
         <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
     {% endblock %}
@@ -30,10 +36,11 @@
                         <b> ACM Show</b>
                         <span class="caret"></span>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="/ac_life"><span class="glyphicon glyphicon-repeat"></span><b> ACM Life</b></a></li>
-                            <li><a href="/ac_match"><span class="glyphicon glyphicon-play-circle"></span><b> ACM Match</b></a></li>
-                            <li><a href="/ac_team"><span class="glyphicon glyphicon-leaf"></span><b> ACM Team</b></a></li>
-                            <li><a href="/ac_coach"><span class="glyphicon glyphicon-education"></span><b> ACM Coach</b></a></li>
+                            <li><a href="/acm_train"><span class="glyphicon glyphicon-repeat"></span><b> Train</b></a></li>
+                            <li><a href="/acm_match"><span class="glyphicon glyphicon-play-circle"></span><b> Match</b></a></li>
+                            <li><a href="/acm_team"><span class="glyphicon glyphicon-leaf"></span><b> Team</b></a></li>
+                            <li><a href="/acm_coach"><span class="glyphicon glyphicon-education"></span><b> Coach</b></a></li>
+
                         </ul>
                     </li>
                 </ul>
@@ -59,7 +66,7 @@
         </div>
     </nav>
 
-    <br><br>
+
     {% block page %}
 
     {% endblock %}
