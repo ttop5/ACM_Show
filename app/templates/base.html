@@ -5,14 +5,14 @@
     <title>{% block title %} {% endblock %}</title>
 
 
-    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://v3.bootcss.com/examples/offcanvas/offcanvas.css" rel="stylesheet">
-    <style type="text/css"></style><script src="./Off Canvas Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
-    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+{#    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">#}
+{#    <style type="text/css"></style><script src="./Off Canvas Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>#}
+{#    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>#}
+{#    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>#}
 
     {% block css %}
         <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/offcanvas.css') }}" rel="stylesheet">
     {% endblock %}
 
 </head>
