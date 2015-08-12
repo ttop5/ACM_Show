@@ -8,7 +8,7 @@ def index():
 
 
 @app.route('/acm_train')
-def ac_life():
+def ac_train():
     return render_template("acm_train.html")
 
 
@@ -30,3 +30,8 @@ def ac_coach():
 @app.errorhandler(404)
 def not_found(error):
     return render_template("404.html")
+
+
+@app.route('/admin/index')
+def admin_index():
+    return render_template("admin/index.html")
