@@ -18,6 +18,9 @@ with app.app_context():
     db.init_app(app)
     login_manager.init_app(app)
 
+    from .admin import admin
+    admin.init_app(app)
+
     from app.models import UserModel
 
     @login_manager.user_loader
