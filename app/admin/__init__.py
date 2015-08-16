@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from flask import redirect, url_for, request
+from flask import redirect, url_for, request, views
 from flask.ext.login import current_user
 from flask.ext.admin import Admin, AdminIndexView as _AdminIndexView
+from flask.ext.admin.base import expose, expose_plugview
 
 
 class AdminIndexView(_AdminIndexView):
@@ -14,6 +15,15 @@ class AdminIndexView(_AdminIndexView):
         if not self.is_accessible():
             return redirect(url_for('auth.login', next=request.url))
 
+    @expose()
+    def index(self):
+        return self.render('admin/index.html')
+
+    @expose_plugview('/step/')
+    class Step(views.MethodView):
+
+        def get(self, cls):
+            return cls.render('admin/index.html')
 
 admin = Admin(
     name='ACM_SHOW 后台管理',
