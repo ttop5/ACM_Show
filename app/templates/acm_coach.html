@@ -5,10 +5,8 @@
 {% block page %}
 
 <div class="container">
-
-      <div class="row row-offcanvas row-offcanvas-right">
-
-        <div class="col-xs-12 col-sm-9">
+    <div class="row">
+        <div class="col-md-9">
           <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
@@ -17,57 +15,34 @@
             <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
           </div>
 
-            <div class="row">
-              <div class="col-sm-6 col-md-6">
+          <div class="row">
+              {% for u in users %}
+              <div class="col-md-6">
                 <div class="thumbnail">
                   <img src="../static/images/AC_logo.jpg" alt="ACM">
                   <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-                    <p><a class="btn btn-default" href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" role="button">View details »</a></p>
-{#                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>#}
+                    <h3>{{ u.nickname }}</h3>
+                    <p>{{ u.description }}</p>
                   </div>
                 </div>
               </div>
-            </div>
+              {% endfor %}
+          </div>
         </div><!--/.col-xs-12.col-sm-9-->
 
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" style="position:fixed;left:73%;">
-            <div style="width: 200px;">
+        <div class="col-md-3" class="right">
+
             <div class="panel-group" id="accordion2">
+                {% for u in users %}
                 <div class="panel panel-default">
                     <div class="panel-heading" data-toggle="collapse"
                         data-parent="#accordion2" href="#collapse2015">
-                        <a class="accordion-toggle" href="#">Coach_1</a>
+                        <a class="accordion-toggle" href="#">{{ u.nickname }}</a>
                     </div>
                 </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse"
-                        data-parent="#accordion2" href="#collapse2014">
-                        <a class="accordion-toggle" href="#">Coach_2</a>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse"
-                        data-parent="#accordion2" href="#collapse2013">
-                        <a class="accordion-toggle" href="#">Coach_3</a>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse"
-                        data-parent="#accordion2" href="#collapse2012">
-                        <a class="accordion-toggle" href="#">Coach_4</a>
-                    </div>
+                {% endfor %}
             </div>
-        </div>
-
-        </div><!--/.sidebar-offcanvas-->
-
-      </div><!--/row-->
-
-      <div class="row row-offcanvas row-offcanvas-right">
-
-      </div><!--/row-->
-
+        </div><!--/row-->
+    </div>
+</div>
 {% endblock %}
