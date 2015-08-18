@@ -1,6 +1,7 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask.ext.login import UserMixin
 from app import db
+from datetime import datetime
 from .role import RoleModel
 from mongoengine import DENY, NULLIFY  # noqa
 
@@ -19,6 +20,7 @@ class UserModel(db.Document, UserMixin):
         default=[]
     )
     grade = db.StringField(max_length=255)
+    created_at = db.DateTimeField(default=datetime.now, required=True)
 
     @staticmethod
     def generate_password(password):
