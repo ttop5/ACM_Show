@@ -26,5 +26,5 @@ class RoleModel(db.Document):
         return self.name
 
     meta = {
-        'collection': 'Role'
+        'collection': 'roles'
     }
