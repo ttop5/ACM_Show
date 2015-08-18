@@ -2,13 +2,14 @@
 
 from .mixin import ModelViewMixin
 from . import admin
-from app.models import UserModel
+from app.models import UserModel, RoleModel
 
 
 class UserAdmin(ModelViewMixin):
-
-    pass
-
+    column_list = [
+        'id', 'username', 'roles', 'nickname', 'email', 'grade']
+    column_filters = ['username', 'nickname', 'email', 'grade']
+    column_searchable_list = ['username', 'nickname', 'email', 'grade']
 
 admin.add_view(
     UserAdmin(

@@ -8,7 +8,7 @@ from mongoengine import DENY, NULLIFY  # noqa
 class UserModel(db.Document, UserMixin):
     id = db.SequenceField(primary_key=True)
     username = db.StringField(max_length=255)
-    name = db.StringField(max_length=255)
+    nickname = db.StringField(max_length=255)
     email = db.StringField(required=True, unique=True)
     password = db.StringField(max_length=255)
     roles = db.ListField(
