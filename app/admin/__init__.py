@@ -9,7 +9,7 @@ from flask.ext.admin.base import expose, expose_plugview
 class AdminIndexView(_AdminIndexView):
 
     def is_accessible(self):
-        return current_user.is_authenticated()
+        return current_user.is_authenticated() and current_user.is_administrator()
 
     def _handle_view(self, name, **kwargs):
         if not self.is_accessible():

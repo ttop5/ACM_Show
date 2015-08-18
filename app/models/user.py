@@ -41,3 +41,7 @@ class UserModel(db.Document, UserMixin):
             password=password,
             **kwargs
         )
+
+    def is_administrator(self):
+        admin = RoleModel.objects(name='admin').first()
+        return admin in self.roles
