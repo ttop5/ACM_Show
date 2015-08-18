@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template
+from app.models import RoleModel, UserModel
 
 
 @app.route('/')
@@ -24,7 +25,9 @@ def ac_team():
 
 @app.route('/acm_coach')
 def ac_coach():
-    return render_template("acm_coach.html")
+    role = RoleModel.objects(name='coach').first()
+    users = UserModel.objects(roles=role).all()
+    return render_template("acm_coach.html", users=users)
 
 
 @app.errorhandler(404)
