@@ -1,13 +1,24 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask.ext.login import UserMixin
 from app import db
+from .role import RoleModel
+from mongoengine import DENY, NULLIFY  # noqa
 
 
 class UserModel(db.Document, UserMixin):
     id = db.SequenceField(primary_key=True)
     username = db.StringField(max_length=255)
+    name = db.StringField(max_length=255)
     email = db.StringField(required=True, unique=True)
     password = db.StringField(max_length=255)
+    roles = db.ListField(
+        db.ReferenceField(
+            RoleModel,
+            reverse_delete_rule=DENY
+        ),
+        default=[]
+    )
+    grade = db.StringField(max_length=255)
 
     @staticmethod
     def generate_password(password):
