@@ -13,6 +13,8 @@ class UserAdmin(ModelViewMixin):
     column_filters = ['username', 'nickname', 'email', 'grade']
     column_searchable_list = ['username', 'nickname', 'email', 'grade']
 
+    form_excluded_columns = [
+        'password', 'created_at']
 
     def scaffold_form(self):
         form_class = super(UserAdmin, self).scaffold_form()
