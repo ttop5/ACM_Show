@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template
-from app.models import RoleModel, UserModel
+from app.models import RoleModel, UserModel, TeamModel
 
 
 @app.route('/')
@@ -20,7 +20,8 @@ def ac_match():
 
 @app.route('/acm_team')
 def ac_team():
-    return render_template("acm_team.html")
+    teams = TeamModel.objects.all()
+    return render_template("acm_team.html", teams=teams)
 
 
 @app.route('/acm_coach')
