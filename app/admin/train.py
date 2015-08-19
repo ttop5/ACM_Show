@@ -6,7 +6,10 @@ from app.models import TrainModel
 
 
 class TrainAdmin(ModelViewMixin):
-    pass
+    column_list = [
+        'id', 'train', 'time', 'place', 'description']
+    column_filters = ['train', 'place']
+    column_searchable_list = ['train', 'place']
 
 admin.add_view(
     TrainAdmin(
