@@ -6,7 +6,11 @@ from app.models import MatchModel
 
 
 class MatchAdmin(ModelViewMixin):
-    pass
+    column_list = [
+        'id', 'match', 'team', 'time', 'description']
+    column_filters = ['match']
+    column_searchable_list = ['match']
+
 
 admin.add_view(
     MatchAdmin(
