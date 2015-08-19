@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template
-from app.models import RoleModel, UserModel, TeamModel, MatchModel
+from app.models import RoleModel, UserModel, TeamModel, MatchModel, TrainModel
 
 
 @app.route('/')
@@ -10,7 +10,8 @@ def index():
 
 @app.route('/acm_train')
 def ac_train():
-    return render_template("acm_train.html")
+    trains = TrainModel.objects.all()
+    return render_template("acm_train.html", trains=trains)
 
 
 @app.route('/acm_match')
