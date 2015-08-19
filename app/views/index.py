@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template
-from app.models import RoleModel, UserModel, TeamModel
+from app.models import RoleModel, UserModel, TeamModel, MatchModel
 
 
 @app.route('/')
@@ -15,7 +15,8 @@ def ac_train():
 
 @app.route('/acm_match')
 def ac_match():
-    return render_template("acm_match.html")
+    matches = MatchModel.objects.all()
+    return render_template("acm_match.html", matches=matches)
 
 
 @app.route('/acm_team')

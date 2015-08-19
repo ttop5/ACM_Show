@@ -4,11 +4,9 @@
 
 {% block page %}
 
-<div class="container">
-
-      <div class="row row-offcanvas row-offcanvas-right">
-
-        <div class="col-xs-12 col-sm-9">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-9">
           <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
@@ -16,158 +14,39 @@
             <h1>ACM Match</h1>
             <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
           </div>
-
-            <div class="row">
-              <div class="col-sm-6 col-md-6">
+          <div class="row">
+              {% for m in matches %}
+              <div class="col-md-6">
                 <div class="thumbnail">
                   <img src="../static/images/AC_logo.jpg" alt="ACM">
                   <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-                    <p><a class="btn btn-default" href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" role="button">View details »</a></p>
-{#                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>#}
+                    <h3>{{ m.match }}</h3>
+                    <p>
+                        <span>{{ m.team }}</span>
+                    </p>
+                    <p>
+                        <span>{{ m.time }}</span>
+                    </p>
+                    <p>{{ m.description }}</p>
                   </div>
                 </div>
               </div>
-                <div class="col-sm-6 col-md-6">
-                <div class="thumbnail">
-                  <img src="../static/images/AC_logo.jpg" alt="ACM">
-                  <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-                    <p><a class="btn btn-default" href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" role="button">View details »</a></p>
-{#                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>#}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 col-md-6">
-                    <div class="thumbnail">
-                      <img src="../static/images/AC_logo.jpg" alt="ACM">
-                      <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-                        <p><a class="btn btn-default" href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" role="button">View details »</a></p>
-    {#                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>#}
-                      </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6">
-                    <div class="thumbnail">
-                      <img src="../static/images/AC_logo.jpg" alt="ACM">
-                      <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-                        <p><a class="btn btn-default" href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" role="button">View details »</a></p>
-    {#                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>#}
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </div><!--/.col-xs-12.col-sm-9-->
-
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" style="position:fixed;left:73%;">
-            <div style="width: 200px;">
+              {% endfor %}
+          </div>
+        </div>
+        <div class="col-md-3" class="right">
             <div class="panel-group" id="accordion2">
+                {% for m in matches %}
                 <div class="panel panel-default">
                     <div class="panel-heading" data-toggle="collapse"
                         data-parent="#accordion2" href="#collapse2015">
-                        <a class="accordion-toggle" href="#">2015赛季</a>
-                    </div>
-                    <div id="collapse2015" class="panel-collapse collapse"
-                        style="height: 0px;">
-                        <div class="panel-body">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#2010">山东省省赛</a></li>
-                                <li><a href="#">ICPC/区域赛</a></li>
-                            </ul>
-                        </div>
+                        <a class="accordion-toggle" href="#">{{ m.match }}</a>
                     </div>
                 </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse"
-                        data-parent="#accordion2" href="#collapse2014">
-                        <a class="accordion-toggle" href="#">2014赛季</a>
-                    </div>
-                    <div id="collapse2014" class="panel-collapse collapse"
-                        style="height: 0px;">
-                        <div class="panel-body">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#2010">山东省省赛</a></li>
-                                <li><a href="#">ICPC/区域赛</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse"
-                        data-parent="#accordion2" href="#collapse2013">
-                        <a class="accordion-toggle" href="#">2013赛季</a>
-                    </div>
-                    <div id="collapse2013" class="panel-collapse collapse"
-                        style="height: 0px;">
-                        <div class="panel-body">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#2010">山东省省赛</a></li>
-                                <li><a href="#">ICPC/区域赛</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse"
-                        data-parent="#accordion2" href="#collapse2012">
-                        <a class="accordion-toggle" href="#">2012赛季</a>
-                    </div>
-                    <div id="collapse2012" class="panel-collapse collapse"
-                        style="height: 0px;">
-                        <div class="panel-body">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#2010">山东省省赛</a></li>
-                                <li><a href="#">ICPC/区域赛</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse"
-                        data-parent="#accordion2" href="#collapse2011">
-                        <a class="accordion-toggle" href="#">2011赛季</a>
-                    </div>
-                    <div id="collapse2011" class="panel-collapse collapse"
-                        style="height: 0px;">
-                        <div class="panel-body">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#2010">山东省省赛</a></li>
-                                <li><a href="#">ICPC/区域赛</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse"
-                        data-parent="#accordion2" href="#collapse2010">
-                        <a class="accordion-toggle" href="#">2010赛季</a>
-                    </div>
-                    <div id="collapse2010" class="panel-collapse collapse"
-                        style="height: 0px;">
-                        <div class="panel-body">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#2010">山东省省赛</a></li>
-                                <li><a href="#">ICPC/区域赛</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
-
-      </div><!--/row-->
-
-      <div class="row row-offcanvas row-offcanvas-right">
-
-      </div><!--/row-->
+    </div>
+</div>
 
 {% endblock %}
