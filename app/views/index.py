@@ -33,6 +33,11 @@ def ac_coach():
     return render_template("acm_coach.html", users=users)
 
 
+@app.route('/statistical_charts')
+def statistical_charts():
+    return render_template("statistical_charts/statistical_charts.php")
+
+
 @app.errorhandler(404)
 def not_found(error):
     return render_template("404.html")
