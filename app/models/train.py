@@ -8,7 +8,7 @@ class TrainModel(db.Document):
     id = db.SequenceField(primary_key=True)
     train = db.StringField(required=True, max_length=255)
     time = db.DateTimeField(default=datetime.now)
-    place = db.StringField(required=True, max_length=255)
+    place = db.StringField(max_length=255)
     description = db.StringField()
 
     def __unicode__(self):
