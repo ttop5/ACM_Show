@@ -11,26 +11,26 @@ def index():
 @app.route('/acm_train')
 def ac_train():
     trains = TrainModel.objects.all()
-    return render_template("acm_train.html", trains=trains)
+    return render_template("ouracm/acm_train.html", trains=trains)
 
 
 @app.route('/acm_match')
 def ac_match():
     matches = MatchModel.objects.all()
-    return render_template("acm_match.html", matches=matches)
+    return render_template("ouracm/acm_match.html", matches=matches)
 
 
 @app.route('/acm_team')
 def ac_team():
     teams = TeamModel.objects.all()
-    return render_template("acm_team.html", teams=teams)
+    return render_template("ouracm/acm_team.html", teams=teams)
 
 
 @app.route('/acm_coach')
 def ac_coach():
     role = RoleModel.objects(name='coach').first()
     users = UserModel.objects(roles=role).all()
-    return render_template("acm_coach.html", users=users)
+    return render_template("ouracm/acm_coach.html", users=users)
 
 
 @app.route('/statistical_charts')
