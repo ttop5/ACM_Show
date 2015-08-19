@@ -32,3 +32,4 @@ admin = Admin(
 )
 
 from .user import *
+from .team import *

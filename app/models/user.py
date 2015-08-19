@@ -43,6 +43,9 @@ class UserModel(db.Document, UserMixin):
             **kwargs
         )
 
+    def __str__(self):
+        return self.nickname
+
     def is_administrator(self):
         admin = RoleModel.objects(name='admin').first()
         return admin in self.roles
