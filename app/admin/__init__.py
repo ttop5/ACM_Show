@@ -34,3 +34,4 @@ admin = Admin(
 from .user import *
 from .team import *
 from .match import *
+from .train import *
