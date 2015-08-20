@@ -10,15 +10,6 @@
         <link href="{{ url_for('static', filename='css/pastebin.css') }}" rel="stylesheet">
     {% endblock %}
 
-    <style type="text/css">
-        #flot-placeholder1, #flot-placeholder3{width:1200px;height:500px;}
-        #flot-placeholder2{width:1000px;height:500px;}
-    </style>
-    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="http://www.pureexample.com/js/flot/excanvas.min.js"></script><![endif]-->
-    <script src="{{ url_for('static', filename='jquery/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='jquery/jquery.min.js') }}"></script>
-
-
 </head>
 <body>
     <div class="container">
@@ -31,7 +22,7 @@
                                 <span class="glyphicon glyphicon-home"></span> HOME
                             </a>
                         </li>
-                        <li role="presentation"><a href="/statistical_charts"><span class="glyphicon glyphicon-stats"></span> Statistical Charts</a></li>
+                        <li role="presentation"><a href="http://sdutacm.org//statistical_charts"><span class="glyphicon glyphicon-stats"></span> Statistical Charts</a></li>
                         <li role="presentation"><a href="/pastebin"><span class="glyphicon glyphicon-cloud-upload"></span> Pastebin</a></li>
                         <li role="presentation"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="glyphicon glyphicon-fire"></span>
                              Our ACM

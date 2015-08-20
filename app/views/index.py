@@ -8,11 +8,6 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/statistical_charts')
-def statistical_charts():
-    return render_template("statistical_charts/statistical_charts.php")
-
-
 @app.route('/pastebin')
 def pastebin():
     return render_template("pastebin/pastebin.html")
