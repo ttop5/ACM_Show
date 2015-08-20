@@ -8,6 +8,16 @@ def index():
     return render_template("index.html")
 
 
+@app.route('/statistical_charts')
+def statistical_charts():
+    return render_template("statistical_charts/statistical_charts.php")
+
+
+@app.route('/pastebin')
+def pastebin():
+    return render_template("pastebin/pastebin.html")
+
+
 @app.route('/acm_train')
 def ac_train():
     trains = TrainModel.objects.all()
@@ -31,11 +41,6 @@ def ac_coach():
     role = RoleModel.objects(name='coach').first()
     users = UserModel.objects(roles=role).all()
     return render_template("ouracm/acm_coach.html", users=users)
-
-
-@app.route('/statistical_charts')
-def statistical_charts():
-    return render_template("statistical_charts/statistical_charts.php")
 
 
 @app.errorhandler(404)

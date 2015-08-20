@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}Acm Show{% endblock %}
+
+{% block page %}
+
+<div class="container">
+    <div id="paste">
+        <h1>Pastebin</h1>
+        <form method="POST">
+            <table>
+                <tr>
+                    <th>
+                        <label for="id_poster">Poster:</label>
+                    </th>
+                    <td>
+                        <input id="id_poster" type="text" name="poster" maxlength="30">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="id_syntax">Syntax:</label>
+                    </th>
+                    <td>
+                        <select neme="syntax" id="id_syntax">
+                            <option value="text">Text</option>
+                            <option value="c">C</option>
+                            <option value="cpp">C++</option>
+                            <option value="java">Java</option>
+                            <option value="go">Go</option>
+                            <option value="rb">Ruby</option>
+                            <option value="python">Python</option>
+                            <option value="python3">Python 3</option>
+                            <option value="csharp">C#</option>
+                            <option value="php">PHP</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="js">JavaScript</option>
+                            <option value="sql">SQL</option>
+                            <option value="bash">Bash</option>
+                            <option value="basemake">Makefile</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="id_content">Content:</label>
+                    </th>
+                    <td>
+                        <textarea id="id_content" rows="20" cols="120" name="content"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>&nbsp;</th>
+                    <td>
+                        <input type="submit" value="Paste!">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
