@@ -259,7 +259,7 @@
 </script>
 
 
-<div class="container-fluid">
+<div class="container">
     <div class="jumbotron">
         <p>In Last 24 Hours</p>
     </div>
@@ -267,7 +267,7 @@
 
 <div id="flot-placeholder1"></div>
 
-<div class="container-fluid">
+<div class="container">
     <div class="jumbotron">
         <p>In Last 30 Days</p>
     </div>
@@ -275,7 +275,7 @@
 
 <div id="flot-placeholder2"></div>
 
-<div class="container-fluid">
+<div class="container">
     <div class="jumbotron">
         <p>In Last 12 Months</p>
     </div>
