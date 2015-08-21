@@ -9,3 +9,13 @@
 th, td{
     padding: 0px 0px 8px 5px;
 }
+
+#pastebin_content{
+    width: 750px;
+    height: 350px;
+}
+
+#pastebin_paste{
+    width: 56px;
+    height: 25px;
+}
