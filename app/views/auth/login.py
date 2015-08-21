@@ -28,4 +28,4 @@ class LoginView(MethodView):
             return render_template(self.template, form=form)
         login_user(form.user, form.remember_me.data)
         flash('Login success')
-        return redirect(request.args.get('next') or url_for('index'))
+        return redirect(request.args.get('next') or url_for('admin.index'))
