@@ -8,11 +8,6 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/pastebin')
-def pastebin():
-    return render_template("pastebin/pastebin.html")
-
-
 @app.route('/acm_train')
 def ac_train():
     trains = TrainModel.objects.all()

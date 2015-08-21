@@ -27,11 +27,17 @@ with app.app_context():
     def load_user(id):
         return UserModel.objects(id=id).first()
 
-    from .views import bp_auth
+    from .views import bp_auth, bp_pastebin
 
     app.register_blueprint(
         bp_auth,
         url_prefix='/auth'
     )
+
+    app.register_blueprint(
+        bp_pastebin,
+        url_prefix='/pastebin'
+    )
+
 
 from app import views, models
