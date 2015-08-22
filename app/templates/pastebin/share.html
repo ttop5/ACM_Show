@@ -5,16 +5,18 @@
 {% block page %}
 
 <div class="container">
-    <div>
-        <h1>Pastebin</h1>
+    <div id="paste_share">
+        <h1 id="paste_share_h1">Pastebin</h1>
         <table>
             <tr>
-                <th>Poster: {{ poster }}</th>
-                <th>Syntax: {{ syntax }}</th>
-                <th>Time: {{ time }}</th>
+                <td>POSTER: {{ poster }}</td>
+                <td>SYNTAX: {{ syntax }}</td>
+                <td>TIME: {{ time }}</td>
+            </tr>
+            <tr>
+                 {{ content|safe }}
             </tr>
         </table>
-        {{ content|safe }}
     </div>
 </div>
 

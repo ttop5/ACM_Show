@@ -20,6 +20,15 @@ th, td{
     height: 25px;
 }
 
+
+#paste_share_h1{
+    text-align: center;
+}
+
+table{
+    margin: 0 auto;
+}
+
 /* CC-BY 2010 Dieki Noordhoek. */
 .c{color:#080;font-style:italic}
 .err{border:1px solid #F00}
@@ -79,9 +88,3 @@ th, td{
 .vg{color:#B8860B}
 .vi{color:#B8860B}
 .il{color:#666}
-
-.inside{position:relative;top:-2em;padding:0 0.5em}
-th,td{padding:0px 0px 6px 12px;color:#888}
-label,
-.pturl{color:#dd4814 !important}
-.linenos{font-size:medium}
