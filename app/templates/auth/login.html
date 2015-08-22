@@ -4,45 +4,42 @@
 {% block title %}Login{% endblock %}
 
 {% block page %}
-    <br>
-    <center>
-        <div class="container">
-            <h2 class="page-title">管理员登录</h2>
-            <form action="{{ url_for("auth.login") }}" method="post" class="form-horizontal col-sm-6 col-sm-offset-2">
-                {{ form.csrf_token }}
-                {% if form.csrf_token.errors %}
-                    <div class="warning">You have submitted an invalid CSRF token</div>
-                {% endif %}
-                <div class="form-group">
-                    {{ form.email.label(class="control-label col-sm-4") }}
-                    <div class="col-sm-8">
-                        {{ form.email(class="form-control") }}
-                        {{ field_error(form.email) }}
-                    </div>
+    <div class="container">
+        <h2 id="login-page-title">Sign in</h2>
+        <form action="{{ url_for("auth.login") }}" method="post" class="form-horizontal col-sm-6 col-sm-offset-2">
+            {{ form.csrf_token }}
+            {% if form.csrf_token.errors %}
+                <div class="warning">You have submitted an invalid CSRF token</div>
+            {% endif %}
+            <div class="form-group">
+                {{ form.email.label(class="control-label col-sm-4") }}
+                <div class="col-sm-8">
+                    {{ form.email(class="form-control") }}
+                    {{ field_error(form.email) }}
                 </div>
-                <div class="form-group">
-                    {{ form.password.label(class="control-label col-sm-4") }}
-                    <div class="col-sm-8">
-                        {{ form.password(class="form-control") }}
-                        {{ field_error(form.password) }}
-                    </div>
+            </div>
+            <div class="form-group">
+                {{ form.password.label(class="control-label col-sm-4") }}
+                <div class="col-sm-8">
+                    {{ form.password(class="form-control") }}
+                    {{ field_error(form.password) }}
                 </div>
-                <div class="form-group">
-                        <div class="checkbox col-sm-offset-4 col-sm-8">
-                            <label style="float: left;">
-                                {{ form.remember_me() }}
-                                {{ field_error(form.remember_me) }}
-                                {{ form.remember_me.label() }}
-                            </label>
-                    </div>
-              </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-4 col-sm-8">
-                        {{ form.submit(class="btn btn-primary col-sm-5") }}
-                        <a class="btn btn-warning col-sm-5 col-sm-offset-2" href="#" class="forget-password">Forget passwd?</a>
-                    </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox col-sm-offset-4 col-sm-8">
+                    <label style="float: left;">
+                        {{ form.remember_me() }}
+                        {{ field_error(form.remember_me) }}
+                        {{ form.remember_me.label() }}
+                    </label>
                 </div>
-            </form>
-        </div>
-    </center>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-8">
+                    {{ form.submit(class="btn btn-primary col-sm-5") }}
+                    <a class="btn btn-warning col-sm-5 col-sm-offset-2" href="#" class="forget-password">Forget passwd?</a>
+                </div>
+            </div>
+        </form>
+    </div>
 {% endblock %}
