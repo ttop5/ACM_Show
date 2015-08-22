@@ -14,7 +14,17 @@ class ShareView(MethodView):
 
     def get(self, id):
         form = PastebinModel.objects(id=id).first()
-        return render_template(self.template, form=form)
+        poster = form.poster
+        syntax = form.syntax
+        time = form.time.strftime('%Y-%m-%d %H:%M:%S')
+        content = form.content
+        return render_template(
+            self.template,
+            poster=poster,
+            syntax=syntax,
+            time=time,
+            content=content
+        )
 
 
 
