@@ -6,6 +6,9 @@ from flask import ( # noqa
 from flask.views import MethodView
 from app.forms import PastebinForm
 from app.models import PastebinModel
+from pygments import highlight
+from pygments.formatters import HtmlFormatter
+from pygments.lexers import get_lexer_by_name
 
 
 class ShareView(MethodView):
@@ -18,6 +21,9 @@ class ShareView(MethodView):
         syntax = form.syntax
         time = form.time.strftime('%Y-%m-%d %H:%M:%S')
         content = form.content
+        lexer = get_lexer_by_name(syntax, stripall=True)
+        formatter = HtmlFormatter(linenos=True, cssclass="source")
+        content = highlight(content, lexer, formatter)
         return render_template(
             self.template,
             poster=poster,

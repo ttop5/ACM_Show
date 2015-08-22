@@ -19,3 +19,69 @@ th, td{
     width: 56px;
     height: 25px;
 }
+
+/* CC-BY 2010 Dieki Noordhoek. */
+.c{color:#080;font-style:italic}
+.err{border:1px solid #F00}
+.k{color:#A2F;font-weight:bold}
+.o{color:#666}
+.cm{color:#080;font-style:italic}
+.cp{color:#080}
+.c1{color:#080;font-style:italic}
+.c-Special{color:#080;font-weight:bold}
+.gd{color:#A00000}
+.ge{font-style:italic}
+.gr{color:#F00}
+.gh{color:#000080;font-weight:bold}
+.gi{color:#00A000}
+.go{color:#808080}
+.gp{color:#000080;font-weight:bold}
+.gs{font-weight:bold}
+.gu{color:#800080;font-weight:bold}
+.gt{color:#0040D0}
+.kc{color:#A2F;font-weight:bold}
+.kd{color:#A2F;font-weight:bold}
+.kp{color:#A2F}
+.kr{color:#A2F;font-weight:bold}
+.kt{color:#A2F;font-weight:bold}
+.m{color:#666}
+.s{color:#B44}
+.na{color:#B44}
+.nb{color:#A2F}
+.nc{color:#00F}
+.no{color:#800}
+.nd{color:#A2F}
+.ni{color:#999;font-weight:bold}
+.ne{color:#D2413A;font-weight:bold}
+.nf{color:#00A000}
+.nl{color:#A0A000}
+.nn{color:#00F;font-weight:bold}
+.nt{color:#008000;font-weight:bold}
+.nv{color:#B8860B}
+.ow{color:#A2F;font-weight:bold}
+.mf{color:#666}
+.mh{color:#666}
+.mi{color:#666}
+.mo{color:#666}
+.sb{color:#B44}
+.sc{color:#B44}
+.sd{color:#B44;font-style:italic}
+.s2{color:#B44}
+.se{color:#B62;font-weight:bold}
+.sh{color:#B44}
+.si{color:#B68;font-weight:bold}
+.sx{color:#008000}
+.sr{color:#B68}
+.s1{color:#B44}
+.ss{color:#B8860B}
+.bp{color:#A2F}
+.vc{color:#B8860B}
+.vg{color:#B8860B}
+.vi{color:#B8860B}
+.il{color:#666}
+
+.inside{position:relative;top:-2em;padding:0 0.5em}
+th,td{padding:0px 0px 6px 12px;color:#888}
+label,
+.pturl{color:#dd4814 !important}
+.linenos{font-size:medium}
