@@ -13,7 +13,8 @@ class ShareView(MethodView):
     template = 'pastebin/share.html'
 
     def get(self, id):
-        return render_template(self.template)
+        form = PastebinModel.objects(id=id).first()
+        return render_template(self.template, form=form)
 
 
 
