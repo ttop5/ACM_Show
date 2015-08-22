@@ -1,9 +1,9 @@
 #paste{
-    padding-left: 150px;
+    padding-left: 0px;
 }
 
 #paste_h1{
-    padding-left: 350px;
+    text-align: center;
 }
 
 th, td{
@@ -11,7 +11,7 @@ th, td{
 }
 
 #pastebin_content{
-    width: 750px;
+    width: 700px;
     height: 350px;
 }
 
