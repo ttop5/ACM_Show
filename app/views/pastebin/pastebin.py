@@ -43,7 +43,7 @@ class PastebinView(MethodView):
         return render_template(self.template, form=form)
 
     def post(self):
-        form =PastebinForm()
+        form = PastebinForm()
         if not form.validate():
             return render_template(self.template, form=form)
 
