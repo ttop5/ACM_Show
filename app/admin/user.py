@@ -39,11 +39,11 @@ class RoleAdmin(ModelViewMixin):
 
 admin.add_view(
     UserAdmin(
-        UserModel, name='User', category='User Manage', url='user'
+        UserModel, category=u'用户管理', name=u'用户列表', url='user'
     )
 )
 admin.add_view(
     RoleAdmin(
-        RoleModel, name='Role', category='User Manage', url='role'
+        RoleModel, category=u'用户管理', name=u'角色管理', url='role'
     )
 )

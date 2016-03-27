@@ -13,6 +13,6 @@ class TeamAdmin(ModelViewMixin):
 
 admin.add_view(
     TeamAdmin(
-        TeamModel, name='Team', category='Team Manage', url='team'
+        TeamModel, category=u'队伍管理', name=u'队伍管理', url='team'
     )
 )

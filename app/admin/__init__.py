@@ -26,12 +26,12 @@ class AdminIndexView(_AdminIndexView):
             return cls.render('admin/index.html')
 
 admin = Admin(
-    name='ACM_SHOW 后台管理',
-    index_view=AdminIndexView(name='Index'),
-    template_mode='bootstrap3'
+    name='ACMSHOW',
+    index_view=AdminIndexView(name=u'首页'),
+    template_mode='bootstrap2'
 )
 
 from .user import *
+from .province import *
+from .regional import *
 from .team import *
-from .match import *
-from .train import *

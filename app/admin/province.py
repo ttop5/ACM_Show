@@ -14,6 +14,6 @@ class MatchAdmin(ModelViewMixin):
 
 admin.add_view(
     MatchAdmin(
-        MatchModel, name='Match', category='Match Manage', url='match'
+        MatchModel, category=u'竞赛管理', name=u'省赛', url='match'
     )
 )

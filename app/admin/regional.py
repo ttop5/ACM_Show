@@ -13,6 +13,6 @@ class TrainAdmin(ModelViewMixin):
 
 admin.add_view(
     TrainAdmin(
-        TrainModel, name='Train', category='Train Manage', url='train'
+        TrainModel, category=u'竞赛管理', name=u'区域赛', url='train'
     )
 )
