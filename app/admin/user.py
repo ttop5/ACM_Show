@@ -9,9 +9,9 @@ from app.models import UserModel, RoleModel
 
 class UserAdmin(ModelViewMixin):
     column_list = [
-        'id', 'username', 'roles', 'nickname', 'email', 'grade', 'created_at']
-    column_filters = ['username', 'nickname', 'email', 'grade']
-    column_searchable_list = ['username', 'nickname', 'email', 'grade']
+        'id', 'username', 'roles', 'email', 'grade', 'created_at']
+    column_filters = ['username', 'email', 'grade']
+    column_searchable_list = ['username', 'email', 'grade']
 
     form_excluded_columns = [
         'password']
