@@ -5,6 +5,7 @@
     <title>{% block title %} {% endblock %}</title>
 
     {% block css %}
+        <link rel="icon" href="{{ url_for('static', filename='images/acmshow.ico')  }}" type="image/x-icon">
         <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', filename='css/offcanvas.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', filename='css/pastebin.css') }}" rel="stylesheet">
