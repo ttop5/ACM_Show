@@ -5,7 +5,7 @@ from .mixin import ModelViewMixin
 from app.models import MatchModel
 
 
-class MatchAdmin(ModelViewMixin):
+class ProvinceAdmin(ModelViewMixin):
     column_list = [
         'id', 'match', 'team', 'time', 'description']
     column_filters = ['match']
@@ -13,7 +13,7 @@ class MatchAdmin(ModelViewMixin):
 
 
 admin.add_view(
-    MatchAdmin(
+    ProvinceAdmin(
         MatchModel, category=u'竞赛管理', name=u'省赛', url='match'
     )
 )
