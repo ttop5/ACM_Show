@@ -17,7 +17,7 @@ class Config:
 
     # mongodb
     MONGODB_SETTINGS = {
-        'db': 'acm_show',
+        'db': 'acmshow',
         'username': '',
         'password': '',
         'host': '127.0.0.1',
