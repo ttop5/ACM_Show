@@ -8,29 +8,29 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/acm_train')
+@app.route('/regional')
 def ac_train():
     trains = TrainModel.objects.all()
-    return render_template("ouracm/acm_train.html", trains=trains)
+    return render_template("regional.html", trains=trains)
 
 
-@app.route('/acm_match')
+@app.route('/province')
 def ac_match():
     matches = MatchModel.objects.all()
-    return render_template("ouracm/acm_match.html", matches=matches)
+    return render_template("province.html", matches=matches)
 
 
-@app.route('/acm_team')
+@app.route('/team')
 def ac_team():
     teams = TeamModel.objects.all()
-    return render_template("ouracm/acm_team.html", teams=teams)
+    return render_template("team.html", teams=teams)
 
 
-@app.route('/acm_coach')
+@app.route('/coach')
 def ac_coach():
     role = RoleModel.objects(name='coach').first()
     users = UserModel.objects(roles=role).all()
-    return render_template("ouracm/acm_coach.html", users=users)
+    return render_template("coach.html", users=users)
 
 
 @app.errorhandler(404)
