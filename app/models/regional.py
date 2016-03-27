@@ -4,9 +4,9 @@ from app import db
 from datetime import datetime
 
 
-class TrainModel(db.Document):
+class RegionalModel(db.Document):
     id = db.SequenceField(primary_key=True)
-    train = db.StringField(required=True, max_length=255)
+    name = db.StringField(required=True, max_length=255)
     time = db.DateTimeField(default=datetime.now)
     place = db.StringField(max_length=255)
     description = db.StringField()
@@ -15,5 +15,5 @@ class TrainModel(db.Document):
         return self.name
 
     meta = {
-            'collection': 'trains'
+            'collection': 'regionals'
     }

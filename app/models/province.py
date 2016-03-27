@@ -6,9 +6,9 @@ from datetime import datetime
 from mongoengine import DENY, NULLIFY  # noqa
 
 
-class MatchModel(db.Document):
+class ProvinceModel(db.Document):
     id = db.SequenceField(primary_key=True)
-    match = db.StringField(required=True, max_length=255)
+    name = db.StringField(required=True, max_length=255)
     team = db.ReferenceField(
         TeamModel,
         reverse_delete_rule=DENY,
@@ -20,5 +20,5 @@ class MatchModel(db.Document):
         return self.name
 
     meta = {
-            'collection': 'matches'
+            'collection': 'provinces'
     }

@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template
-from app.models import RoleModel, UserModel, TeamModel, MatchModel, TrainModel
+from app.models import RoleModel, UserModel, TeamModel, ProvinceModel, RegionalModel
 
 
 @app.route('/')
@@ -9,25 +9,25 @@ def index():
 
 
 @app.route('/regional')
-def ac_train():
-    trains = TrainModel.objects.all()
-    return render_template("regional.html", trains=trains)
+def regional():
+    regionals = RegionalModel.objects.all()
+    return render_template("regional.html", regionals=regionals)
 
 
 @app.route('/province')
-def ac_match():
-    matches = MatchModel.objects.all()
-    return render_template("province.html", matches=matches)
+def province():
+    provinces = ProvinceModel.objects.all()
+    return render_template("province.html", provinces=provinces)
 
 
 @app.route('/team')
-def ac_team():
+def team():
     teams = TeamModel.objects.all()
     return render_template("team.html", teams=teams)
 
 
 @app.route('/coach')
-def ac_coach():
+def coach():
     role = RoleModel.objects(name='coach').first()
     users = UserModel.objects(roles=role).all()
     return render_template("coach.html", users=users)

@@ -2,17 +2,17 @@
 
 from . import admin
 from .mixin import ModelViewMixin
-from app.models import TrainModel
+from app.models import RegionalModel
 
 
 class RegionalAdmin(ModelViewMixin):
     column_list = [
-        'id', 'train', 'time', 'place', 'description']
-    column_filters = ['train', 'place']
-    column_searchable_list = ['train', 'place']
+        'id', 'name', 'time', 'place', 'description']
+    column_filters = ['name', 'place']
+    column_searchable_list = ['name', 'place']
 
 admin.add_view(
     RegionalAdmin(
-        TrainModel, category=u'竞赛管理', name=u'区域赛', url='regional'
+        RegionalModel, category=u'竞赛管理', name=u'区域赛', url='regional'
     )
 )
