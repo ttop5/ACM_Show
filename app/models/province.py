@@ -14,6 +14,7 @@ class ProvinceModel(db.Document):
         reverse_delete_rule=DENY,
     )
     time = db.DateTimeField(default=datetime.now)
+    place = db.StringField(max_length=255)
     description = db.StringField()
 
     def __unicode__(self):

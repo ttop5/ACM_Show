@@ -32,6 +32,6 @@ admin = Admin(
 )
 
 from .user import *
+from .team import *
 from .province import *
 from .regional import *
-from .team import *
