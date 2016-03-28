@@ -2,10 +2,6 @@
     padding-left: 0px;
 }
 
-#paste_h1{
-    text-align: center;
-}
-
 th, td{
     padding: 0px 0px 8px 5px;
 }
@@ -18,11 +14,6 @@ th, td{
 #pastebin_paste{
     width: 56px;
     height: 25px;
-}
-
-
-#paste_share_h1{
-    text-align: center;
 }
 
 table{
