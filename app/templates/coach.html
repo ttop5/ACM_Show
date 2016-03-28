@@ -15,7 +15,7 @@
                 <div class="thumbnail">
                   <img src="../static/images/AC_logo.jpg" alt="ACM">
                   <div class="caption">
-                    <h3>{{ u.nickname }}</h3>
+                    <h3>{{ u.username }}</h3>
                     <p>{{ u.description }}</p>
                   </div>
                 </div>
@@ -28,7 +28,7 @@
                 {% for u in users %}
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a class="accordion-toggle" href="#">{{ u.nickname }}</a>
+                        <a class="accordion-toggle" href="#">{{ u.username }}</a>
                     </div>
                 </div>
                 {% endfor %}
