@@ -9,6 +9,7 @@ from mongoengine import DENY, NULLIFY  # noqa
 class ProvinceModel(db.Document):
     id = db.SequenceField(primary_key=True)
     name = db.StringField(required=True, max_length=255)
+    rank = db.StringField(max_length=255)
     team = db.ReferenceField(
         TeamModel,
         reverse_delete_rule=DENY,
