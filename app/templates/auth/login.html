@@ -1,11 +1,11 @@
-{% extends 'base.html' %}
+{% extends 'login-base.html' %}
 {% from "_macro/_formhelpers.html" import field_error %}
 
 {% block title %}Login{% endblock %}
 
 {% block page %}
     <div class="container">
-        <h2 id="login-page-title">Sign in</h2>
+        <h1 id="login-page-title">Sign in</h1>
         <form action="{{ url_for("auth.login") }}" method="post" class="form-horizontal col-sm-6 col-sm-offset-2">
             {{ form.csrf_token }}
             {% if form.csrf_token.errors %}
