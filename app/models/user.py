@@ -43,7 +43,7 @@ class UserModel(db.Document, UserMixin):
         )
 
     def __str__(self):
-        return self.nickname
+        return self.username
 
     def is_administrator(self):
         admin = RoleModel.objects(name='admin').first()
