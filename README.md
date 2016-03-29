@@ -1,16 +1,6 @@
 # Acm_Show
 
 
-## Function
-
-+ Code Pastebin
-+ Competition Show
-+ Team && Coach Show
-+ Simple Login
-+ User && Role Manage
-+ Team && Competition Manage
-
-
 ## Features
 
 + Flask
@@ -20,21 +10,21 @@
 
 ## Usage(Ubuntu)
 
-Virtualenv:
+Environment:
 
 ```bash
 sudo apt-get install python-pip
+sudo apt-get insatll mongodb
 pip install virtualenv
-virtualenv venv
-source venv/bin/activate
+git lone https://github.com/ttop5/Acm_Show.git
 ```
 
 Install:
 
 ```bash
-sudo apt-get insatll mongodb
-git lone https://github.com/ttop5/Acm_Show.git
 cd Acm_Show
+virtualenv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
